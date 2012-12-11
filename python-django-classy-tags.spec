@@ -1,17 +1,13 @@
 %define	module	django-classy-tags
-%define name	python-%{module}
-%define version 0.3.4.1
-%define release %mkrel 1
 
 Summary:	Class-based template tags for Django
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		python-%{module}
+Version:	0.3.4.1
+Release:	2
 Source0:	http://pypi.python.org/packages/source/d/%{module}/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://pypi.python.org/pypi/django-classy-tags/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Requires:	python-django
 BuildRequires:	python-setuptools
@@ -23,12 +19,14 @@ Class-based template tags for Django.
 %setup -q -n %{module}-%{version}
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
-
-%clean
-%__rm -rf %{buildroot}
+sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
-%defattr(-,root,root)
+
+
+%changelog
+* Mon Dec 19 2011 Lev Givon <lev@mandriva.org> 0.3.4.1-1mdv2011.0
++ Revision: 743778
+- imported package python-django-classy-tags
 
