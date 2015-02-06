@@ -4,7 +4,7 @@ Summary:	Class-based template tags for Django
 
 Name:		python-%{module}
 Version:	0.5.1
-Release:	1
+Release:	2
 Source0:	http://pypi.python.org/packages/source/d/django-classy-tags/django-classy-tags-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
