@@ -8,7 +8,7 @@ Release:	2
 Source0:	http://pypi.python.org/packages/source/d/django-classy-tags/django-classy-tags-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://pypi.python.org/pypi/django-classy-tags/
+Url:		https://pypi.python.org/pypi/django-classy-tags/
 BuildArch:	noarch
 Requires:	python-django
 BuildRequires:	python-setuptools
