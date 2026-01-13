@@ -1,29 +1,28 @@
-%define	module	django-classy-tags
+%define module django-classy-tags
+%define oname django_classy_tags
 
+Name:		python-django-classy-tags
 Summary:	Class-based template tags for Django
-
-Name:		python-%{module}
-Version:	0.5.1
-Release:	2
-Source0:	http://pypi.python.org/packages/source/d/django-classy-tags/django-classy-tags-%{version}.tar.gz
-License:	BSD
+Version:	4.1.0
+Release:	1
+License:	BSD-3-Clause
 Group:		Development/Python
-Url:		https://pypi.python.org/pypi/django-classy-tags/
+URL:		https://github.com/django-cms/django-classy-tags
+#URL:		https://pypi.python.org/pypi/django-classy-tags/
+Source0:	%{URL}/archive/%{version}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+BuildSystem:	python
 BuildArch:	noarch
-Requires:	python-django
-BuildRequires:	python-setuptools
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(pre-commit)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
+Requires:	python%{pyver}dist(django)
 
 %description
 Class-based template tags for Django.
 
-%prep
-%setup -q -n %{module}-%{version}
-
-%install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
-sed -i 's/.*egg-info$//' FILE_LIST
-
-%files -f FILE_LIST
-
-
-
+%files
+%doc README.rst
+%license LICENSE
+%{python_sitelib}/classytags
+%{python_sitelib}/%{oname}-%{version}*.*-info

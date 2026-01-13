@@ -1,4 +1,2 @@
-removed_sources:
-  django-classy-tags-0.3.4.1.tar.gz: 14ef8b506e5889fc1d4cbb2d8c88aeaaffe6cd53
 sources:
-  django-classy-tags-0.5.1.tar.gz: 4d753ba87580114d703b65447d24fc9a89115143
+  python-django-classy-tags-4.1.0.tar.gz: 3b3c08617fa877ad89209c0b2a22c0bce5a3856b
