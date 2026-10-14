@@ -4,7 +4,7 @@
 Name:		python-django-classy-tags
 Summary:	Class-based template tags for Django
 Version:	4.1.0
-Release:	1
+Release:	2
 License:	BSD-3-Clause
 Group:		Development/Python
 URL:		https://github.com/django-cms/django-classy-tags
